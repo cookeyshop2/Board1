@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.cookey.domain.BoardVO;
+import com.cookey.domain.ReplyVO;
 import com.cookey.service.BoardService;
+import com.cookey.service.ReplyService;
 
 @Controller
 @RequestMapping("/board/*")
@@ -28,6 +30,9 @@ public class BoardController {
 	@Inject
 	private BoardService service;
 	
+	// 댓글 서비스 객체 주입
+	@Inject
+	private ReplyService replyService;
 	
 	// 글쓰기 - GET
 	// http://localhost:8088/board/register
@@ -111,6 +116,11 @@ public class BoardController {
 		//log.info(vo+"");
 		// 가져온 데이터를  연결된 뷰페이지에 출력	
 		model.addAttribute("vo", vo);
+		
+		// 댓글 조회
+		List<ReplyVO> reply = null;
+		reply = replyService.list(bno);
+		model.addAttribute("reply", reply);
 		
 //		model.addAttribute("vo", service.readBoard(bno));
 //		model.addAttribute(service.readBoard(bno));

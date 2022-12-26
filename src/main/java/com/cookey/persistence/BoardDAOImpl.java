@@ -46,16 +46,7 @@ public class BoardDAOImpl implements BoardDAO {
 		
 		return boardList;
 	}
-	
-	// 게시물 목록 조회
-//	@Override
-//	public List<BoardVO> listAll(Criteria cri) throws Exception {
-//		log.info(" listAll() 호출 ");
-//		// mapper 해당 sql 호출
-//		//return sqlSession.selectList(NAMESPACE+".listAll");
-//		return sqlSession.selectList(NAMESPACE+".listAll", cri);
-//	}
-	
+
 	// 게시물 총 갯수
 	@Override
 	public int listCount() throws Exception {
@@ -65,7 +56,7 @@ public class BoardDAOImpl implements BoardDAO {
 	@Override
 	public BoardVO getBoard(Integer bno) throws Exception {
 		// mapper에 있는 sql 호출
-		BoardVO vo = sqlSession.selectOne(NAMESPACE+".getBoard",bno);
+		BoardVO vo = sqlSession.selectOne(NAMESPACE+".getBoard", bno);
 		
 		return vo;
 	}

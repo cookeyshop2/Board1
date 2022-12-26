@@ -4,27 +4,17 @@ import java.sql.Date;
 
 public class BoardVO {
 
-	private int bno;
+	private Integer bno;
 	private String title;
 	private String content;
 	private String writer;
 	private Date regdate;
 	private int viewcnt;
-
-	public BoardVO() {}
-	public BoardVO(int bno, String title, String content, String writer, Date regdate, int viewcnt) {
-		super();
-		this.bno = bno;
-		this.title = title;
-		this.content = content;
-		this.writer = writer;
-		this.regdate = regdate;
-		this.viewcnt = viewcnt;
-	}
-	public int getBno() {
+	
+	public Integer getBno() {
 		return bno;
 	}
-	public void setBno(int bno) {
+	public void setBno(Integer bno) {
 		this.bno = bno;
 	}
 	public String getTitle() {
@@ -63,5 +53,8 @@ public class BoardVO {
 		return "BoardVO [bno=" + bno + ", title=" + title + ", content=" + content + ", writer=" + writer + ", regdate="
 				+ regdate + ", viewcnt=" + viewcnt + "]";
 	}
+	
+	
+
 	
 }

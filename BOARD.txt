@@ -40,10 +40,3 @@ CREATE TABLE `tbl_board` (
 글 수정하기(처리)		/board/modify 		POST		리스트페이지/본문페이지(컨트롤러)
 글 삭제하기				/board/remove		POST		리스트페이지(컨트롤러)
 
-
-
-
-
-
-
-

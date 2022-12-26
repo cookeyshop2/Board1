@@ -319,7 +319,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="${pageContext.request.contextPath }/board/register"><i class="fa fa-circle-o"></i> 글쓰기</a></li>
-                <li><a href="${pageContext.request.contextPath }/board/listAll"><i class="fa fa-circle-o"></i> 게시판목록 </a></li>
+                <li><a href="${pageContext.request.contextPath }/board/listAll"><i class="fa fa-circle-o"></i> 글목록 </a></li>
               </ul>
             </li>
 <!--             <li class="treeview"> -->
